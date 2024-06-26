@@ -1,17 +1,19 @@
 import express from 'express';
-import { test } from '../controllers/auth.js';
+import {  signIn, signUp } from '../controllers/auth.js';
+// import { signUp } from '../controllers/auth.js';
 
 
 const router = express.Router();
 
 
 // create a user 
+router.post("/signup",signUp)
 
-router.post("/signup",)
+// sign up
+router.post("/signin",signIn)
 
-router.post("/signin",)
-
-router.post("/google",)
+// // google auth
+// router.post("/google",)
 
 
 
