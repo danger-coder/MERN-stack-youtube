@@ -14,7 +14,7 @@ export const getUser =(req,res,next)=>{
 }
 
 
-export const subscriber =(req,res,next)=>{
+export const subscribe =(req,res,next)=>{
 
 }
 
