@@ -6,6 +6,7 @@ import videoRoutes from "./routes/users.js"
 import commentRoutes from "./routes/users.js"
 import authRoutes from "./routes/auth.js"
 import bcrypt from 'bcryptjs';
+import cookieParser from "cookie-parser";
 
 
 
@@ -23,7 +24,7 @@ const connect = ()=>{
     });
 
 }
-
+app.use(cookieParser());
 app.use(express.json());
 app.use("/api/users",userRoutes)
 app.use("/api/video",videoRoutes)
