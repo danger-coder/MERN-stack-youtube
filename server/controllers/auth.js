@@ -7,7 +7,6 @@ import jwt from 'jsonwebtoken';
 export const signUp = async (req, res, next) => {
 
     try {
-
         const salt = bcrypt.genSaltSync(10);
         const hash = bcrypt.hashSync(req.body.password, salt);
         const newUser = new User({ ...req.body, password: hash });
@@ -23,7 +22,6 @@ export const signUp = async (req, res, next) => {
 export const signIn = async (req, res, next) => {
 
     try {
-
         const user = await User.findOne({ name: req.body.name });
         if (!user) return next(createError(404, "User not found"));
 
